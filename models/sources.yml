@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: axis_core
+    tables:
+      - name: walletdetails
+      - name: transactiondetails
+      - name: walletprofiles
+      
+
+  - name: dbt-dimensions
+    tables:
+      - name: transactions_dimension
+      - name: transactions_stg
+      - name: transactions_stg_new
+      - name: transactions_stg_update
+
+      - name: wallets_dimension
+      - name: wallets_stg
+      - name: wallets_stg_new
+      - name: wallets_stg_update
+      - name: wallets_stg_exp
+      - name: wallets_stg_no_change
+
