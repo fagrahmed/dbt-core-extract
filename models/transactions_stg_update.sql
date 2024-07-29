@@ -4,7 +4,7 @@
     depends_on=['transactions_stg'],
     on_schema_change='append_new_columns',
     pre_hook=[
-        "{% if target.schema == 'dbt-dimensions' and source('dbt-dimensions', 'inc_transactions_stg_update') is not none %}TRUNCATE TABLE {{ source('dbt-dimensions', 'inc_transactions_stg_update') }};{% endif %}"
+        "{% if target.schema == 'dbt-dimensions' and source('dbt-dimensions', 'transactions_stg_update') is not none %}TRUNCATE TABLE {{ source('dbt-dimensions', 'inc_transactions_stg_update') }};{% endif %}"
     ]
 )}}
 
