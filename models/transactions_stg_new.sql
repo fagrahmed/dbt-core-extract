@@ -4,7 +4,7 @@
     unique_key= ['txndetailsid'],
     on_schema_change='append_new_columns',
     pre_hook=[
-        "{% if target.schema == 'dbt-dimensions' and source('dbt-dimensions', 'transactions_stg_new') is not none %}TRUNCATE TABLE {{ source('dbt-dimensions', 'inc_transactions_stg_new') }};{% endif %}"
+        "{% if target.schema == 'dbt-dimensions' and source('dbt-dimensions', 'transactions_stg_new') is not none %}TRUNCATE TABLE {{ source('dbt-dimensions', 'transactions_stg_new') }};{% endif %}"
     ]
 )}}
 
