@@ -203,61 +203,6 @@ models:
       - name: walletnumber
         data_type: TEXT
 
-  - name: wallets_stg_no_change
-    config:
-      contract:
-        enforced: true
-    depends_on:
-      - ref('wallets_stg_update')
-      - ref('wallets_stg_exp')
-    columns:
-      - name: id
-        data_type: text
-        constraints:
-          - type: not_null
-          - type: primary_key
-      - name: currentflag
-        data_type: BOOLEAN
-      - name: expdate
-        data_type: TIMESTAMPTZ
-      - name: hash_column
-        data_type: TEXT
-      - name: loaddate
-        data_type: TIMESTAMP
-      - name: operation
-        data_type: TEXT
-      - name: partnerid
-        data_type: TEXT
-      - name: profileid
-        data_type: TEXT
-      - name: wallet_activatedat_local
-        data_type: TIMESTAMP
-      - name: wallet_createdat_local
-        data_type: TIMESTAMP
-      - name: wallet_lasttxnts_local
-        data_type: TIMESTAMP
-      - name: wallet_modifiedat_local
-        data_type: TIMESTAMP
-      - name: wallet_reactivatedat_local
-        data_type: TIMESTAMP
-      - name: wallet_status
-        data_type: TEXT
-      - name: wallet_suspendedat_local
-        data_type: TIMESTAMP
-      - name: wallet_type
-        data_type: TEXT
-      - name: wallet_unregisteredat_local
-        data_type: TIMESTAMP
-      - name: wallet_unsuspendedat_local
-        data_type: TIMESTAMP
-      - name: utc
-        data_type: int
-      - name: walletid
-        data_type: TEXT
-      - name: walletnumber
-        data_type: TEXT
-
-
   - name: wallets_dimension
     config:
       contract:
@@ -267,7 +212,6 @@ models:
       - ref('wallets_stg_new')
       - ref('wallets_stg_update')
       - ref('wallets_stg_exp')
-      - ref('wallets_stg_no_change')
     columns:
       - name: id
         data_type: text
