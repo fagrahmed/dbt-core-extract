@@ -65,7 +65,7 @@ SELECT
     stg.transaction_commitat_local,
     stg.transaction_failedat_local,
     stg.utc,
-    stg.upd_counter,
+    0 AS upd_counter,
     stg.txntype,
     stg.transactionstatus,
     stg.transactionchannel,
