@@ -43,6 +43,7 @@ SELECT
     walletStatus AS wallet_status,
     walletprofileid AS profileid,
     partnerid AS partnerid,
+    registeredby->>'userId' as registeredby,
     (now()::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') AS loaddate
 FROM
     {{ source('axis_core', 'walletdetails') }} src

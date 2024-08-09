@@ -37,6 +37,7 @@ SELECT
     final.wallet_status,
     final.profileid,
     final.partnerid,
+    final.registeredby,
     (now()::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') AS loaddate  
 
 FROM {{ source('dbt-dimensions', 'wallets_stg') }} stg
@@ -68,6 +69,7 @@ SELECT
     stg.wallet_status,
     stg.profileid,
     stg.partnerid,
+    stg.registeredby,
     stg.loaddate
 
 FROM {{ ref('wallets_stg') }} stg

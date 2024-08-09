@@ -38,6 +38,7 @@ SELECT
     stg.wallet_status,
     stg.profileid,
     stg.partnerid,
+    stg.registeredby,
     stg.loaddate
 
 FROM {{ source('dbt-dimensions', 'wallets_stg') }} stg
@@ -69,6 +70,7 @@ SELECT
     stg.wallet_status,
     stg.profileid,
     stg.partnerid,
+    stg.registeredby,
     stg.loaddate
 
 FROM {{ source('dbt-dimensions', 'wallets_stg') }} stg

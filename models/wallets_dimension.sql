@@ -40,6 +40,7 @@ select
 	wallet_status,
 	profileid,
 	partnerid,
+	registeredby,
 	loaddate
 
 from {{ref("wallets_stg_update")}}
@@ -67,6 +68,7 @@ select
 	wallet_status,
 	profileid,
 	partnerid,
+	registeredby,
 	loaddate
 
 from {{ref("wallets_stg_exp")}}
@@ -95,6 +97,7 @@ select
 	wallet_status,
 	profileid,
 	partnerid,
+	registeredby,
 	loaddate
 
 from {{ref("wallets_stg_new")}}

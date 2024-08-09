@@ -23,6 +23,8 @@ models:
         data_type: TEXT
       - name: profileid
         data_type: TEXT
+      - name: registeredby
+        data_type: TEXT
       - name: wallet_activatedat_local
         data_type: TIMESTAMP
       - name: wallet_createdat_local
@@ -73,6 +75,8 @@ models:
       - name: partnerid
         data_type: TEXT
       - name: profileid
+        data_type: TEXT
+      - name: registeredby
         data_type: TEXT
       - name: wallet_activatedat_local
         data_type: TIMESTAMP
@@ -125,6 +129,8 @@ models:
         data_type: TEXT
       - name: profileid
         data_type: TEXT
+      - name: registeredby
+        data_type: TEXT
       - name: wallet_activatedat_local
         data_type: TIMESTAMP
       - name: wallet_createdat_local
@@ -175,6 +181,8 @@ models:
       - name: partnerid
         data_type: TEXT
       - name: profileid
+        data_type: TEXT
+      - name: registeredby
         data_type: TEXT
       - name: wallet_activatedat_local
         data_type: TIMESTAMP
@@ -231,6 +239,8 @@ models:
       - name: partnerid
         data_type: TEXT
       - name: profileid
+        data_type: TEXT
+      - name: registeredby
         data_type: TEXT
       - name: wallet_activatedat_local
         data_type: TIMESTAMP
