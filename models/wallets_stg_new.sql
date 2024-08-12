@@ -38,6 +38,7 @@ SELECT
     stg.wallet_status,
     stg.profileid,
     stg.partnerid,
+    stg.pinsetflag,
     stg.registeredby,
     stg.loaddate
 
@@ -70,6 +71,7 @@ SELECT
     stg.wallet_status,
     stg.profileid,
     stg.partnerid,
+    stg.pinsetflag,
     stg.registeredby,
     stg.loaddate
 

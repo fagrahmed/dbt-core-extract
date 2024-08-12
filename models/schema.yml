@@ -23,6 +23,8 @@ models:
         data_type: TEXT
       - name: profileid
         data_type: TEXT
+      - name: pinsetflag
+        data_type: BOOLEAN
       - name: registeredby
         data_type: TEXT
       - name: wallet_activatedat_local
@@ -76,6 +78,8 @@ models:
         data_type: TEXT
       - name: profileid
         data_type: TEXT
+      - name: pinsetflag
+        data_type: BOOLEAN
       - name: registeredby
         data_type: TEXT
       - name: wallet_activatedat_local
@@ -129,6 +133,8 @@ models:
         data_type: TEXT
       - name: profileid
         data_type: TEXT
+      - name: pinsetflag
+        data_type: BOOLEAN
       - name: registeredby
         data_type: TEXT
       - name: wallet_activatedat_local
@@ -182,6 +188,8 @@ models:
         data_type: TEXT
       - name: profileid
         data_type: TEXT
+      - name: pinsetflag
+        data_type: BOOLEAN
       - name: registeredby
         data_type: TEXT
       - name: wallet_activatedat_local
@@ -240,6 +248,8 @@ models:
         data_type: TEXT
       - name: profileid
         data_type: TEXT
+      - name: pinsetflag
+        data_type: BOOLEAN
       - name: registeredby
         data_type: TEXT
       - name: wallet_activatedat_local

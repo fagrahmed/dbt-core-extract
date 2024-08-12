@@ -37,6 +37,7 @@ with update_old as (
         stg.wallet_status,
         stg.profileid,
         stg.partnerid,
+        stg.pinsetflag,
         stg.registeredby,
         (now()::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') AS loaddate  
 
@@ -72,6 +73,7 @@ SELECT
     stg.wallet_status,
     stg.profileid,
     stg.partnerid,
+    stg.pinsetflag,
     stg.registeredby,
     stg.loaddate
 

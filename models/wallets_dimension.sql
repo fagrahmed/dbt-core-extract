@@ -40,6 +40,7 @@ select
 	wallet_status,
 	profileid,
 	partnerid,
+	pinsetflag,
 	registeredby,
 	loaddate
 
@@ -68,6 +69,7 @@ select
 	wallet_status,
 	profileid,
 	partnerid,
+	pinsetflag,
 	registeredby,
 	loaddate
 
@@ -97,6 +99,7 @@ select
 	wallet_status,
 	profileid,
 	partnerid,
+	pinsetflag,
 	registeredby,
 	loaddate
 

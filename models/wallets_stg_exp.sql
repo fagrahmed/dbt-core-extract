@@ -37,6 +37,7 @@ SELECT
     final.wallet_status,
     final.profileid,
     final.partnerid,
+    final.pinsetflag,
     final.registeredby,
     (now()::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') AS loaddate  
 
@@ -69,6 +70,7 @@ SELECT
     stg.wallet_status,
     stg.profileid,
     stg.partnerid,
+    stg.pinsetflag,
     stg.registeredby,
     stg.loaddate
 
