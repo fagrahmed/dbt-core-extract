@@ -94,6 +94,7 @@ select
 	wallet_unsuspendedat_local,
 	wallet_unregisteredat_local,
 	wallet_activatedat_local,
+	wallet_registeredat_local,
 	wallet_reactivatedat_local,
 	wallet_lasttxnts_local,
 	utc,
