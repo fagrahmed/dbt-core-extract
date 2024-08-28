@@ -36,7 +36,7 @@ SELECT
     (unsuspendedat::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') AS wallet_unsuspendedat_local,
     (unregisteredat::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') AS wallet_unregisteredat_local,
     (activatedat::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') AS wallet_activatedat_local,
-    (registeredat::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') AS wallet_registredat_local,
+    (registeredat::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') AS wallet_registeredat_local,
     (reactivatedat::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') AS wallet_reactivatedat_local,
     (lasttxnts::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') AS wallet_lasttxnts_local,
     3 as utc,
