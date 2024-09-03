@@ -45,6 +45,8 @@ models:
         data_type: TIMESTAMP
       - name: wallet_type
         data_type: TEXT
+      - name: wallet_subtype
+        data_type: TEXT
       - name: wallet_unregisteredat_local
         data_type: TIMESTAMP
       - name: wallet_unsuspendedat_local
@@ -101,6 +103,8 @@ models:
       - name: wallet_suspendedat_local
         data_type: TIMESTAMP
       - name: wallet_type
+        data_type: TEXT
+      - name: wallet_subtype
         data_type: TEXT
       - name: wallet_unregisteredat_local
         data_type: TIMESTAMP
@@ -159,6 +163,8 @@ models:
         data_type: TIMESTAMP
       - name: wallet_type
         data_type: TEXT
+      - name: wallet_subtype
+        data_type: TEXT
       - name: wallet_unregisteredat_local
         data_type: TIMESTAMP
       - name: wallet_unsuspendedat_local
@@ -215,6 +221,8 @@ models:
       - name: wallet_suspendedat_local
         data_type: TIMESTAMP
       - name: wallet_type
+        data_type: TEXT
+      - name: wallet_subtype
         data_type: TEXT
       - name: wallet_unregisteredat_local
         data_type: TIMESTAMP
@@ -277,6 +285,8 @@ models:
       - name: wallet_suspendedat_local
         data_type: TIMESTAMP
       - name: wallet_type
+        data_type: TEXT
+      - name: wallet_subtype
         data_type: TEXT
       - name: wallet_unregisteredat_local
         data_type: TIMESTAMP

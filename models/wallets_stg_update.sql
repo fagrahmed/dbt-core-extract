@@ -15,43 +15,41 @@
 
 {% if table_exists %}
 
-with update_old as (
-    SELECT
-        final.id AS id,
-        'update' AS operation,
-        true AS currentflag,
-        null::timestamptz AS expdate,
-        stg.walletid,
-        stg.walletnumber,
-        stg.hash_column,
-        stg.wallet_createdat_local,
-        stg.wallet_modifiedat_local,
-        stg.wallet_suspendedat_local,
-        stg.wallet_unsuspendedat_local,
-        stg.wallet_unregisteredat_local,
-        stg.wallet_activatedat_local,
-        stg.wallet_registeredat_local,
-        stg.wallet_reactivatedat_local,
-        stg.wallet_lasttxnts_local,
-        stg.utc,
-        stg.wallet_type,
-        stg.wallet_status,
-        stg.profileid,
-        stg.partnerid,
-        stg.pinsetflag,
-        stg.registeredby,
-        (now()::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') AS loaddate  
+SELECT
+    final.id AS id,
+    'update' AS operation,
+    true AS currentflag,
+    null::timestamptz AS expdate,
+    stg.walletid,
+    stg.walletnumber,
+    stg.hash_column,
+    stg.wallet_createdat_local,
+    stg.wallet_modifiedat_local,
+    stg.wallet_suspendedat_local,
+    stg.wallet_unsuspendedat_local,
+    stg.wallet_unregisteredat_local,
+    stg.wallet_activatedat_local,
+    stg.wallet_registeredat_local,
+    stg.wallet_reactivatedat_local,
+    stg.wallet_lasttxnts_local,
+    stg.utc,
+    stg.wallet_type,
+    stg.wallet_subtype,
+    stg.wallet_status,
+    stg.profileid,
+    stg.partnerid,
+    stg.pinsetflag,
+    stg.registeredby,
+    (now()::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') AS loaddate  
 
-    FROM {{ source('dbt-dimensions', 'wallets_stg') }} stg
-    JOIN {{ source('dbt-dimensions', 'wallets_dimension')}} final
-        ON stg.walletid = final.walletid AND stg.walletnumber = final.walletnumber
-    WHERE final.hash_column is not null AND final.hash_column = stg.hash_column and final.operation != 'exp'
-        AND stg.loaddate > final.loaddate
-)
-
-SELECT * from update_old
+FROM {{ source('dbt-dimensions', 'wallets_stg') }} stg
+JOIN {{ source('dbt-dimensions', 'wallets_dimension')}} final
+    ON stg.walletid = final.walletid AND stg.walletnumber = final.walletnumber
+WHERE final.hash_column is not null AND final.hash_column = stg.hash_column and final.operation != 'exp'
+    AND stg.loaddate > final.loaddate
 
 {% else %}
+-- do nothing (extremely high comparison date)
 
 SELECT 
     stg.id,
@@ -72,6 +70,7 @@ SELECT
     stg.wallet_lasttxnts_local,
     stg.utc,
     stg.wallet_type,
+    stg.wallet_subtype,
     stg.wallet_status,
     stg.profileid,
     stg.partnerid,

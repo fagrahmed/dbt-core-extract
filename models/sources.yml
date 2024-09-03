@@ -20,5 +20,4 @@ sources:
       - name: wallets_stg_new
       - name: wallets_stg_update
       - name: wallets_stg_exp
-      - name: wallets_stg_no_change
 

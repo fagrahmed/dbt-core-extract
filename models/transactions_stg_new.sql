@@ -15,6 +15,7 @@
 
 {% if table_exists %}
 -- dimension exists, get only new records; new id(new entry) , or hash_column is different(exp entry's new values)
+
 SELECT 
     stg.id,
     stg.operation,

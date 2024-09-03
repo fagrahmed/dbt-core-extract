@@ -1,5 +1,4 @@
 
-
 {{
     config(
         materialized="incremental",
@@ -19,7 +18,8 @@
 {% set _ = ref('wallets_stg_new') %}
 {% set _ = ref('wallets_stg') %}
 
-select 
+SELECT
+
 	id,
 	operation,
 	currentflag,
@@ -38,6 +38,7 @@ select
 	wallet_lasttxnts_local,
 	utc,
 	wallet_type,
+	wallet_subtype,
 	wallet_status,
 	profileid,
 	partnerid,
@@ -45,11 +46,12 @@ select
 	registeredby,
 	loaddate
 
-from {{ref("wallets_stg_update")}}
+FROM {{ref("wallets_stg_update")}}
 
-union all
+UNION ALL
 
-select 
+SELECT 
+
 	id,
 	operation,
 	currentflag,
@@ -68,6 +70,7 @@ select
 	wallet_lasttxnts_local,
 	utc,
 	wallet_type,
+	wallet_subtype,
 	wallet_status,
 	profileid,
 	partnerid,
@@ -75,12 +78,13 @@ select
 	registeredby,
 	loaddate
 
-from {{ref("wallets_stg_exp")}}
+FROM {{ref("wallets_stg_exp")}}
 
 
-union all
+UNION ALL
 
-select 
+SELECT
+
 	id,
 	operation,
 	currentflag,
@@ -99,6 +103,7 @@ select
 	wallet_lasttxnts_local,
 	utc,
 	wallet_type,
+	wallet_subtype,
 	wallet_status,
 	profileid,
 	partnerid,
@@ -106,4 +111,4 @@ select
 	registeredby,
 	loaddate
 
-from {{ref("wallets_stg_new")}}
+FROM {{ref("wallets_stg_new")}}

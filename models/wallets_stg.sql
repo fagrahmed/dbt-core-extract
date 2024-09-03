@@ -41,6 +41,7 @@ SELECT
     (lasttxnts::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') AS wallet_lasttxnts_local,
     3 as utc,
     wallettype AS wallet_type,
+    subtype AS wallet_subtype,
     walletStatus AS wallet_status,
     walletprofileid AS profileid,
     partnerid AS partnerid,
