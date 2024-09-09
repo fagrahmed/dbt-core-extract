@@ -38,7 +38,7 @@ SELECT
     interchangeaction,
     interchangeamount::float as interchange_amount,
     servicefees_aibyte_transform::float as service_fees,
-    txnrequestedamount_aibyte_transform::float as amount,
+    txnrequestedamount_aibyte_transform::float as txn_amount,
     walletbalancebefore_aibyte_transform::float as balance_before,
     walletbalanceafter_aibyte_transform::float as balance_after,
     walletactualbalancebefore_aibyte_transform as actual_balance_before,

@@ -313,7 +313,7 @@ models:
         data_type: TEXT
       - name: actual_balance_before
         data_type: TEXT
-      - name: amount
+      - name: txn_amount
         data_type: FLOAT
       - name: balance_after
         data_type: FLOAT
@@ -384,7 +384,7 @@ models:
         data_type: TEXT
       - name: actual_balance_before
         data_type: TEXT
-      - name: amount
+      - name: txn_amount
         data_type: FLOAT
       - name: balance_after
         data_type: FLOAT
@@ -453,7 +453,7 @@ models:
         data_type: TEXT
       - name: actual_balance_before
         data_type: TEXT
-      - name: amount
+      - name: txn_amount
         data_type: FLOAT
       - name: balance_after
         data_type: FLOAT
@@ -524,7 +524,7 @@ models:
         data_type: TEXT
       - name: actual_balance_before
         data_type: TEXT
-      - name: amount
+      - name: txn_amount
         data_type: FLOAT
       - name: balance_after
         data_type: FLOAT
