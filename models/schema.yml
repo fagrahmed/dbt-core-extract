@@ -57,6 +57,8 @@ models:
         data_type: TEXT
       - name: walletnumber
         data_type: TEXT
+      - name: wallet_name
+        data_type: TEXT
 
   - name: wallets_stg_new
     config:
@@ -115,6 +117,8 @@ models:
       - name: walletid
         data_type: TEXT
       - name: walletnumber
+        data_type: TEXT
+      - name: wallet_name
         data_type: TEXT
 
   - name: wallets_stg_update
@@ -175,6 +179,8 @@ models:
         data_type: TEXT
       - name: walletnumber
         data_type: TEXT
+      - name: wallet_name
+        data_type: TEXT
 
   - name: wallets_stg_exp
     config:
@@ -233,6 +239,8 @@ models:
       - name: walletid
         data_type: TEXT
       - name: walletnumber
+        data_type: TEXT
+      - name: wallet_name
         data_type: TEXT
 
   - name: wallets_dimension
@@ -298,6 +306,8 @@ models:
         data_type: TEXT
       - name: walletnumber
         data_type: TEXT 
+      - name: wallet_name
+        data_type: TEXT
           
   - name: transactions_dimension
     config:

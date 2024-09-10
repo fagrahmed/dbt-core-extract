@@ -43,6 +43,7 @@ SELECT
     wallettype AS wallet_type,
     subtype AS wallet_subtype,
     walletStatus AS wallet_status,
+    displayname AS wallet_name,
     walletprofileid AS profileid,
     partnerid AS partnerid,
     pinsetflag AS pinsetflag,
