@@ -456,6 +456,14 @@ models:
         data_type: TEXT
       - name: walletdetailsid
         data_type: TEXT
+      - name: wallet_sender_name
+        data_type: TEXT
+      - name: wallet_sender_number
+        data_type: TEXT
+      - name: wallet_receiver_name
+        data_type: TEXT
+      - name: wallet_receiver_number
+        data_type: TEXT
   
   - name: transactions_stg_new
     config:
@@ -527,6 +535,14 @@ models:
         data_type: TEXT
       - name: walletdetailsid
         data_type: TEXT
+      - name: wallet_sender_name
+        data_type: TEXT
+      - name: wallet_sender_number
+        data_type: TEXT
+      - name: wallet_receiver_name
+        data_type: TEXT
+      - name: wallet_receiver_number
+        data_type: TEXT
 
   - name: transactions_stg_update
     config:
@@ -597,4 +613,12 @@ models:
       - name: txntype
         data_type: TEXT
       - name: walletdetailsid
+        data_type: TEXT
+      - name: wallet_sender_name
+        data_type: TEXT
+      - name: wallet_sender_number
+        data_type: TEXT
+      - name: wallet_receiver_name
+        data_type: TEXT
+      - name: wallet_receiver_number
         data_type: TEXT
